@@ -1,0 +1,25 @@
+inherit python
+
+DESCRIPTION="ZIP file library"
+HOMEPAGE="http://zziplib.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+PATCH_URI="
+	http://bugs.gentoo.org/attachment.cgi?id=167642&action=view
+	0.13.50-no-undefined.patch
+"
+
+PKG_NAMES="${PN} libzzip0_13 libzzip-devel"
+zziplib_CONTENTS="usr/bin/*.exe usr/share/doc/"
+libzzip0_13_CONTENTS="usr/bin/*-0-13.dll"
+libzzip_devel_CONTENTS="usr/include/ usr/lib/ usr/share/aclocal/ usr/share/man/ usr/share/${PN}/"
+
+DIFF_EXCLUDES="Makefile"
+
+CYGCONF_ARGS="
+	--disable-builddir
+	--enable-sdl
+	--with-zlib=/usr
+	ac_cv_header_windows_h=no
+	ac_cv_header_winbase_h=no
+	ac_cv_header_winnt_h=no
+"

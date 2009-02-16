@@ -1,0 +1,13 @@
+--- origsrc/zziplib-0.13.50/configure.ac	2008-03-22 15:50:42.000000000 -0500
++++ src/zziplib-0.13.50/configure.ac	2008-12-28 19:29:47.987500000 -0600
+@@ -276,6 +276,10 @@
+ # ---------------------------------------------------------------
+ AC_MSG_CHECKING(link options)
+ case "$host_os" in
++  cygwin*) 
++    ZZIPLIB_LDFLAGS="-no-undefined -export-dynamic"
++    RESOLVES=' '
++  ;;
+   mingw*) 
+     ZZIPLIB_LDFLAGS="-no-undefined -export-all-symbols -mconsole"
+     RESOLVES=' '
