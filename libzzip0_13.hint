@@ -1,5 +1,5 @@
 category: Archive
-requires: cygwin zlib
+requires: zlib
 external-source: zziplib
 sdesc: "ZIP file library (runtime)"
 ldesc: "The zziplib library is intentionally lightweight, it offers the 
