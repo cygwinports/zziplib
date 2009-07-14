@@ -7,20 +7,21 @@ The implementation is based only on the (free) subset of compression
 with the zlib algorithm which is actually used by the zip/unzip tools.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  zlib-1.2.3-2
+  cygwin-1.7.0-50
+  libgcc1-4.3.2-2
+  zlib0-1.2.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.12-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  libtool-2.2.2-2
-  make-3.81-1
-  pkg-config-0.23a-2
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
+  binutils-20080624-2
+  cygport-0.9.7-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-13
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -32,15 +33,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack zziplib-0.13.50-X-src.tar.bz2
+  unpack zziplib-0.13.56-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./zziplib-0.13.50-X.cygport all
+  cygport ./zziplib-0.13.56-X.cygport all
 
 This will create:
-  /usr/src/zziplib-0.13.50-X-src.tar.bz2
-  /usr/src/zziplib-0.13.50-X.tar.bz2
+  /usr/src/libzzip-devel-0.13.56-X.tar.bz2
+  /usr/src/libzzip0.13-0.13.56-X.tar.bz2
+  /usr/src/zziplib-0.13.56-X-src.tar.bz2
+  /usr/src/zziplib-0.13.56-X.tar.bz2
 
 -------------------------------------------
 
@@ -59,18 +62,20 @@ Files included in the binary package:
   /usr/bin/zzxorcat.exe
   /usr/bin/zzxorcopy.exe
   /usr/bin/zzxordir.exe
-  /usr/share/doc/zziplib-0.13.50/COPYING.LIB
-  /usr/share/doc/zziplib-0.13.50/ChangeLog
-  /usr/share/doc/zziplib-0.13.50/README
-  /usr/share/doc/zziplib-0.13.50/TODO
+  /usr/share/doc/zziplib/COPYING.LIB
+  /usr/share/doc/zziplib/ChangeLog
+  /usr/share/doc/zziplib/README
+  /usr/share/doc/zziplib/TODO
 
-(libzzip0_13)
+(libzzip0.13)
   /usr/bin/cygzzip-0-13.dll
   /usr/bin/cygzzipfseeko-0-13.dll
   /usr/bin/cygzzipmmapped-0-13.dll
   /usr/bin/cygzzipwrap-0-13.dll
 
 (libzzip-devel)
+  /usr/include/SDL_rwops_zzip/SDL_rwops_zzip.c
+  /usr/include/SDL_rwops_zzip/SDL_rwops_zzip.h
   /usr/include/zzip-io.h
   /usr/include/zzip.h
   /usr/include/zzip/_config.h
@@ -104,8 +109,7 @@ Files included in the binary package:
   /usr/lib/libzzipwrap.a
   /usr/lib/libzzipwrap.dll.a
   /usr/lib/libzzipwrap.la
-  /usr/lib/pkgconfig/zzip-sdl-config.pc
-  /usr/lib/pkgconfig/zzip-sdl-rwops.pc
+  /usr/lib/pkgconfig/SDL_rwops_zzip.pc
   /usr/lib/pkgconfig/zzip-zlib-config.pc
   /usr/lib/pkgconfig/zzipfseeko.pc
   /usr/lib/pkgconfig/zziplib.pc
@@ -196,21 +200,13 @@ Files included in the binary package:
   /usr/share/man/man3/zzip_strerror_of.3.gz
   /usr/share/man/man3/zzip_tell.3.gz
   /usr/share/man/man3/zzip_telldir.3.gz
-  /usr/share/zziplib/SDL/SDL_rwops_zzip.c
-  /usr/share/zziplib/SDL/SDL_rwops_zzip.h
 
 ------------------
 
 Port Notes:
 
------ version 0.13.50-1 -----
-Version bump.
-
------ version 0.13.49-2 -----
-Fixed undefined variable in pkg-config files.
-
------ version 0.13.49-1 -----
-Initial release for Cygwin.
+----- version 0.13.56-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
