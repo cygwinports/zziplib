@@ -3,13 +3,12 @@ inherit python
 DESCRIPTION="ZIP file library"
 HOMEPAGE="http://zziplib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-PATCH_URI="0.13.56-no-undefined.patch"
+PATCH_URI="0.13.60-no-undefined.patch"
 
 PKG_NAMES="${PN} libzzip0.13 libzzip-devel"
 zziplib_CONTENTS="usr/bin/*.exe usr/share/doc/"
 libzzip0_13_CONTENTS="usr/bin/*-0-13.dll"
-libzzip_devel_CONTENTS="--exclude=*.so.* usr/include/ usr/lib/ usr/share/aclocal/ usr/share/man/"
-PKG_IGNORE="usr/lib/*.so.*"
+libzzip_devel_CONTENTS="usr/include/ usr/lib/ usr/share/aclocal/ usr/share/man/"
 
 DIFF_EXCLUDES="Makefile"
 
