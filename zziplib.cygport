@@ -1,7 +1,5 @@
-inherit python
-
 NAME="zziplib"
-VERSION=0.13.62
+VERSION=0.13.67
 RELEASE=1
 CATEGORY="Archive"
 SUMMARY="ZIP file library"
@@ -11,7 +9,7 @@ Applications can bundle files into a single zip archive and access them.
 The implementation is based only on the (free) subset of compression
 with the zlib algorithm which is actually used by the zip/unzip tools."
 HOMEPAGE="http://zziplib.sourceforge.net/"
-SRC_URI="mirror://sourceforge/zziplib/${NAME}-${VERSION}.tar.bz2"
+SRC_URI="https://github.com/gdraheim/zziplib/archive/v${VERSION}/${NAME}-v${VERSION}.tar.gz"
 PATCH_URI="0.13.62-no-undefined.patch"
 
 PKG_NAMES="${NAME} libzzip0.13 libzzip-devel"
