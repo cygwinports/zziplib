@@ -1,5 +1,5 @@
 NAME="zziplib"
-VERSION=0.13.67
+VERSION=0.13.68
 RELEASE=1
 CATEGORY="Archive"
 SUMMARY="ZIP file library"
